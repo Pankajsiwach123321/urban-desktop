@@ -5,7 +5,7 @@ const UrbnNav = () => {
     <div>
       <nav className="lg:pe-[55px] py-6">
         <div className=" flex justify-between  items-center gap-1">
-          <div className=" w-28 h-11 sm:max-w-[280px]   sm:w-full sm:h-14 px-4 py-2 bg-stone-50 rounded-[18px] border border-gray-200 justify-center items-center sm:gap-3 sm:inline-flex">
+          <div className=" w-28  sm:max-w-[280px]   sm:w-full  px-4 bg-stone-50 rounded-[18px] border border-gray-200 justify-center items-center sm:gap-3 sm:inline-flex">
             <svg
               className=" hidden sm:block"
               width="15"
@@ -20,7 +20,7 @@ const UrbnNav = () => {
               />
             </svg>
             <input
-              className=" text-[#A5A3A9] text-sm font-LibreFranklin font-normal outline-none bg-transparent w-full"
+              className=" text-[#A5A3A9] sm:py-5 py-2 text-sm font-LibreFranklin font-normal outline-none bg-transparent w-full"
               placeholder="Search..."
             />
             <svg
@@ -39,7 +39,7 @@ const UrbnNav = () => {
           </div>
           <div className="flex items-center gap-[15px] sm:gap-[56px]">
             <div className="flex items-center">
-              <a href="#" className=" pe-6">
+              <a href="#" className=" me-6">
                 <svg
                   width="22"
                   height="22"

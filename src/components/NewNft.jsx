@@ -70,6 +70,7 @@ const NewNft = () => {
             </p>
             <div className="flex items-start gap-1 mt-4">
               <svg
+                className=" cursor-pointer"
                 width="16"
                 height="14"
                 viewBox="0 0 16 14"
@@ -100,7 +101,7 @@ const NewNft = () => {
           </span>
         </div>
         <div className=" flex items-end gap-1 pb-1">
-          <img src={s} alt="onlys" />
+          <img src={s} alt="onlys" className="cursor-pointer" />
           <p className="text-gray-900 text-sm font-medium font-Inter leading-none">
             {myinfo.Amount}
           </p>

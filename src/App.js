@@ -20,18 +20,10 @@ function App() {
               <UrbnNav />
               <Routes>
                 <Route path='/' element={<Maindoc />} />
-              </Routes>
-              <Routes>
-                <Route path='home' element={<TrendingNft />} />
-              </Routes>
-              <Routes>
-                <Route path='Topcollection' element={<TopCollection />} />
-              </Routes>
-              <Routes>
-                <Route path='Newnft' element={<NewNft />} />
-              </Routes>
-              <Routes>
-                <Route path='history' element={<History />} />
+                <Route path='/home' element={<TrendingNft />} />
+                <Route path='/Topcollection' element={<TopCollection />} />
+                <Route path='/Newnft' element={<NewNft />} />
+                <Route path='/history' element={<History />} />
               </Routes>
             </div>
           </div>

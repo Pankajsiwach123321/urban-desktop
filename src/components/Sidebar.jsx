@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div>
-      <aside className=" shadow-Aside bg-white bg-[url('./assets/images/asideupperbg-658139ca08169.webp')] bg-no-repeat  xl:w-[305px] pt-8  pb-11 lg:px-6 px-1 min-h-screen flex flex-col fixed">
+      <aside className=" shadow-Aside   top-0 bottom-0 bg-white bg-[url('./assets/images/asideupperbg-658139ca08169.webp')] bg-no-repeat  xl:w-[305px] pt-8  pb-11 lg:px-6 px-1 min-h-screen flex flex-col fixed">
         <div>
           <div className="flex justify-center items-center">
             <img src={logo} alt="logo" />
@@ -13,7 +13,7 @@ const Sidebar = () => {
             URBAN NFT
           </p>
         </div>
-        <div className="flex flex-col lg:justify-between justify-evenly h-full grow mt-[68px]">
+        <div className="flex flex-col lg:justify-between overflow-y-scroll justify-evenly h-full grow mt-[68px]">
           <div>
             <h2 className=" hidden lg:block font-Inter text-xs text-black font-medium lg:ps-[14px]">
               MARKETPLACE

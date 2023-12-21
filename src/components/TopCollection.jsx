@@ -36,7 +36,7 @@ const TopCollection = () => {
     >
       <div
         style={{ backgroundImage: `url(${myinfo.bgdargon})` }}
-        className={` shadow-carditems w-full h-full pt-[62px] pb-2 flex flex-col justify-end items-center rounded-[18px] relative z-[1] overflow-hidden  bg-no-repeat bg-cover object-cover`}
+        className={`shadow-carditems w-full h-full pt-[62px] pb-2 flex flex-col justify-end items-center rounded-[18px] relative z-[1] overflow-hidden  bg-no-repeat bg-cover object-cover`}
       >
         <img
           src={myinfo.img}
