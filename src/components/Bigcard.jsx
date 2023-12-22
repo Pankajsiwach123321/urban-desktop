@@ -16,7 +16,11 @@ function BigCard() {
     <div>
       <div className="xl:max-h-[351px] sm:max-h-[361px] sm:pt-[26px] sm:pe-7 sm:pb-11 sm:ps-8 p-3 bg-white bg-[url(./assets/images/createbg-658139cdc2dea.webp)] rounded-[18px]">
         <div className="flex justify-end items-center gap-[22px]">
-          <a href="#" onClick={() => first?.current?.slickPrev()}>
+          <a
+            href="#"
+            aria-label="prev"
+            onClick={() => first?.current?.slickPrev()}
+          >
             <svg
               width="24"
               height="24"
@@ -59,7 +63,11 @@ function BigCard() {
               </defs>
             </svg>
           </a>
-          <a href="#" onClick={() => first?.current?.slickNext()}>
+          <a
+            href="#"
+            aria-label="next"
+            onClick={() => first?.current?.slickNext()}
+          >
             <svg
               width="24"
               height="24"

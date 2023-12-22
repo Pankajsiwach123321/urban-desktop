@@ -59,7 +59,7 @@ const TrendingNft = () => {
         <h2 className="text-[#4F4F4F] font-Inter text-base font-semibold">
           Trendings NFTs
         </h2>
-        <a href="#" className="flex items-center gap-3">
+        <a href="#" aria-label="viewmore" className="flex items-center gap-3">
           <p className="text-[#4F4F4F] font-Inter text-xs font-semibold">
             Marketplace
           </p>

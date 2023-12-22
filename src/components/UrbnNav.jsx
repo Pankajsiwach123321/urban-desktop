@@ -39,7 +39,7 @@ const UrbnNav = () => {
           </div>
           <div className="flex items-center gap-[15px] sm:gap-[56px]">
             <div className="flex items-center">
-              <a href="#" className=" me-6">
+              <a href="#" aria-label="status" className=" me-6">
                 <svg
                   width="22"
                   height="22"
@@ -67,7 +67,7 @@ const UrbnNav = () => {
                   </defs>
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" aria-label="notification">
                 <svg
                   width="20"
                   height="22"
@@ -97,18 +97,24 @@ const UrbnNav = () => {
               </a>
             </div>
             <div className="flex gap-3 items-center">
-              <a href="#">
-                <img className=" w-full rounded-[18px]" src={profile} />
+              <a href="#" aria-label="profile">
+                <img
+                  className=" w-full rounded-[18px]"
+                  src={profile}
+                  alt="profile"
+                />
               </a>
               <span className=" md:flex flex-col hidden ">
                 <a
                   href="#"
+                  aria-label="user"
                   className="text-zinc-700 text-sm font-bold font-LibreFranklin leading-none"
                 >
                   Cody Fisher
                 </a>
                 <a
                   href="mailto:kenzi.lawson@example.com"
+                  aria-label="mail"
                   className="text-zinc-500 text-xs font-semibold  font-LibreFranklin tracking-tight"
                 >
                   kenzi.lawson@example.com
