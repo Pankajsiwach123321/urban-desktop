@@ -1,10 +1,14 @@
 import React from "react";
 import logo from "../assets/images/logo.webp";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Sidebar = () => {
+  const location = useLocation();
   return (
     <div>
-      <aside className=" shadow-Aside   top-0 bottom-0 bg-white bg-[url('./assets/images/asideupperbg-658139ca08169.webp')] bg-no-repeat  xl:w-[305px] pt-8  pb-11 lg:px-6 px-1 min-h-screen flex flex-col fixed">
+      <aside
+        className="shadow-Aside
+       top-0 bottom-0 bg-white  bg-[url('./assets/images/asideupperbg-658139ca08169.webp')] bg-no-repeat  xl:w-[305px] pt-8  pb-11 lg:px-6 px-1 min-h-screen flex flex-col fixed"
+      >
         <div>
           <div className="flex justify-center items-center">
             <img src={logo} alt="logo" />
@@ -13,7 +17,7 @@ const Sidebar = () => {
             URBAN NFT
           </p>
         </div>
-        <div className="flex flex-col lg:justify-between overflow-y-scroll justify-evenly h-full grow mt-[68px]">
+        <div className="flex flex-col justify-between overflow-y-scroll  h-full mt-[68px]">
           <div>
             <h2 className=" hidden lg:block font-Inter text-xs text-black font-medium lg:ps-[14px]">
               MARKETPLACE
@@ -21,7 +25,9 @@ const Sidebar = () => {
             <div>
               <Link
                 to="/"
-                className="links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer"
+                className={`${
+                  location.pathname === "/" && "bg-brownlightgr"
+                } links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer`}
               >
                 <svg
                   width="16"
@@ -31,13 +37,19 @@ const Sidebar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className=" group-hover:fill-[url(#paint0_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/" &&
+                      "fill-[url(#paint0_linear_33_463)] duration-300"
+                    }  group-hover:fill-[url(#paint0_linear_33_463)] duration-300`}
                     opacity="0.4"
                     d="M11.0562 0.5H13.5957C14.6474 0.5 15.4996 1.35939 15.4996 2.41997V4.98089C15.4996 6.04148 14.6474 6.90087 13.5957 6.90087H11.0562C10.0045 6.90087 9.15234 6.04148 9.15234 4.98089V2.41997C9.15234 1.35939 10.0045 0.5 11.0562 0.5Z"
                     fill="#DCDBDC"
                   />
                   <path
-                    className=" group-hover:fill-[url(#paint1_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/" &&
+                      "fill-[url(#paint1_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M2.40389 0.5H4.94337C5.99507 0.5 6.84726 1.35939 6.84726 2.41997V4.98089C6.84726 6.04148 5.99507 6.90087 4.94337 6.90087H2.40389C1.35219 6.90087 0.5 6.04148 0.5 4.98089V2.41997C0.5 1.35939 1.35219 0.5 2.40389 0.5ZM2.40389 9.09913H4.94337C5.99507 9.09913 6.84726 9.95852 6.84726 11.0191V13.58C6.84726 14.6399 5.99507 15.5 4.94337 15.5H2.40389C1.35219 15.5 0.5 14.6399 0.5 13.58V11.0191C0.5 9.95852 1.35219 9.09913 2.40389 9.09913ZM13.5961 9.09913H11.0566C10.0049 9.09913 9.15274 9.95852 9.15274 11.0191V13.58C9.15274 14.6399 10.0049 15.5 11.0566 15.5H13.5961C14.6478 15.5 15.5 14.6399 15.5 13.58V11.0191C15.5 9.95852 14.6478 9.09913 13.5961 9.09913Z"
@@ -68,13 +80,20 @@ const Sidebar = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                <p className=" hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300">
+                <p
+                  className={`${
+                    location.pathname === "/" &&
+                    "bg-browngradiant bg-clip-text text-transparent font-semibold duration-300"
+                  } hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300`}
+                >
                   Dashboard
                 </p>
               </Link>
               <Link
                 to="home"
-                className="links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-[11px] flex items-center gap-4 group duration-300 cursor-pointer"
+                className={`${
+                  location.pathname === "/home" && "bg-brownlightgr"
+                } links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer`}
               >
                 <svg
                   width="16"
@@ -84,7 +103,10 @@ const Sidebar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="group-hover:fill-[url(#paint1_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/home" &&
+                      "fill-[url(#paint0_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     opacity="0.4"
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -92,20 +114,30 @@ const Sidebar = () => {
                     fill="#A8A8A8"
                   />
                   <path
-                    className="group-hover:fill-[url(#paint1_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/home" &&
+                      "fill-[url(#paint1_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M14.1431 3.76151C14.6006 3.76151 14.9006 3.91901 15.2006 4.26401C15.5006 4.60901 15.5531 5.10401 15.4856 5.55326L14.7731 10.4733C14.6381 11.419 13.8281 12.1158 12.8756 12.1158H4.69306C3.69556 12.1158 2.87056 11.3508 2.78806 10.3615L2.09806 2.18576L0.965557 1.99076C0.665557 1.93826 0.455557 1.64576 0.508057 1.34576C0.560557 1.03826 0.853057 0.83576 1.16056 0.88076L2.94931 1.15076C3.20431 1.19651 3.39181 1.40576 3.41431 1.66076L3.55681 3.34076C3.57931 3.58151 3.77431 3.76151 4.01431 3.76151H14.1431ZM9.59806 7.66076H11.6756C11.9906 7.66076 12.2381 7.40576 12.2381 7.09826C12.2381 6.78326 11.9906 6.53576 11.6756 6.53576H9.59806C9.28306 6.53576 9.03556 6.78326 9.03556 7.09826C9.03556 7.40576 9.28306 7.66076 9.59806 7.66076Z"
                     fill="#A8A8A8"
                   />
                 </svg>
-                <p className=" hidden lg:block font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300">
+                <p
+                  className={`${
+                    location.pathname === "/home" &&
+                    "bg-browngradiant bg-clip-text text-transparent font-semibold duration-300"
+                  } hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300`}
+                >
                   Market
                 </p>
               </Link>
               <Link
                 to="Topcollection"
-                className="links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-[11px] flex items-center gap-4 group duration-300 cursor-pointer"
+                className={`${
+                  location.pathname === "/Topcollection" && "bg-brownlightgr"
+                } links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer`}
               >
                 <svg
                   width="16"
@@ -115,18 +147,29 @@ const Sidebar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="group-hover:fill-[url(#paint1_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/Topcollection" &&
+                      "fill-[url(#paint0_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     opacity="0.4"
                     d="M8.73223 1.33521L10.4021 4.69092C10.5251 4.93404 10.7599 5.10288 11.0307 5.1404L14.7815 5.68667C15.0006 5.71744 15.1994 5.833 15.3336 6.00934C15.4664 6.18343 15.5234 6.40404 15.4912 6.6209C15.4649 6.80099 15.3802 6.96757 15.2504 7.09514L12.5325 9.72973C12.3337 9.91357 12.2437 10.186 12.2917 10.4523L12.9609 14.1562C13.0321 14.6035 12.7358 15.0252 12.2917 15.11C12.1087 15.1392 11.9212 15.1085 11.7561 15.0244L8.41041 13.2813C8.1621 13.156 7.86879 13.156 7.62049 13.2813L4.27477 15.0244C3.86368 15.2428 3.35432 15.0942 3.12552 14.689C3.04075 14.5277 3.01075 14.3438 3.0385 14.1645L3.70765 10.4599C3.75566 10.1942 3.66489 9.92033 3.46685 9.73648L0.749013 7.10339C0.425693 6.79123 0.415941 6.27722 0.727258 5.95381C0.734009 5.94706 0.741511 5.93955 0.749013 5.93205C0.87804 5.80073 1.04758 5.71744 1.23062 5.69568L4.98142 5.14865C5.25148 5.11038 5.48628 4.94305 5.61006 4.69842L7.2199 1.33521C7.36318 1.04706 7.66025 0.867723 7.98282 0.875227H8.08334C8.36315 0.908994 8.60695 1.08233 8.73223 1.33521Z"
                     fill="#A8A8A8"
                   />
                   <path
-                    className="group-hover:fill-[url(#paint1_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/Topcollection" &&
+                      "fill-[url(#paint1_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     d="M7.99401 13.1878C7.84873 13.1923 7.7072 13.2314 7.5799 13.3012L4.25054 15.0404C3.84317 15.2348 3.35567 15.0839 3.12728 14.6943C3.04266 14.5352 3.01195 14.3528 3.04041 14.1741L3.70538 10.4774C3.75031 10.2086 3.66045 9.93542 3.465 9.74627L0.745953 7.11386C0.423201 6.79785 0.417211 6.27917 0.733223 5.95566C0.737716 5.95115 0.74146 5.9474 0.745953 5.94365C0.874754 5.81604 1.041 5.73197 1.21997 5.7057L4.97392 5.15325C5.24575 5.11872 5.48164 4.94908 5.60145 4.70288L7.23318 1.29734C7.3882 1.02261 7.68549 0.858979 8 0.876243C7.99401 1.09918 7.99401 13.0362 7.99401 13.1878Z"
                     fill="#A8A8A8"
                   />
                 </svg>
-                <p className=" hidden lg:block font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300">
+                <p
+                  className={`${
+                    location.pathname === "/Topcollection" &&
+                    "bg-browngradiant bg-clip-text text-transparent font-semibold duration-300"
+                  } hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300`}
+                >
                   Favorites
                 </p>
               </Link>
@@ -139,7 +182,9 @@ const Sidebar = () => {
             <div>
               <Link
                 to="Newnft"
-                className="links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer"
+                className={`${
+                  location.pathname === "/Newnft" && "bg-brownlightgr"
+                } links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer`}
               >
                 <svg
                   width="16"
@@ -149,14 +194,20 @@ const Sidebar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className=" group-hover:fill-[url(#paint0_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/Newnft" &&
+                      "fill-[url(#paint0_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M10.4321 2.55317C10.4321 4.21892 11.7844 5.56927 13.4526 5.56927C13.6363 5.56836 13.8195 5.55073 14 5.51659V11.4961C14 14.0117 12.5161 15.5 9.99682 15.5H4.50977C1.98388 15.5 0.5 14.0117 0.5 11.4961V6.01707C0.5 3.50146 1.98388 2 4.50977 2H10.4849C10.4494 2.18225 10.4317 2.36751 10.4321 2.55317ZM8.86248 10.1724L11.0059 7.40659V7.39341C11.1894 7.14685 11.1425 6.79917 10.9003 6.60976C10.7831 6.51926 10.6342 6.48009 10.4875 6.50119C10.3408 6.52229 10.209 6.60185 10.1221 6.72171L8.3151 9.04634L6.25745 7.42634C6.13997 7.33482 5.99053 7.29441 5.84286 7.31424C5.69519 7.33406 5.56174 7.41245 5.47264 7.53171L3.25672 10.3898C3.17883 10.4868 3.13689 10.6078 3.13801 10.7322C3.12515 10.9836 3.2839 11.212 3.52428 11.2879C3.76466 11.3637 4.02603 11.268 4.16023 11.0549L6.01343 8.6578L8.07108 10.2712C8.18811 10.3656 8.33854 10.4083 8.4878 10.3897C8.63705 10.3711 8.77231 10.2927 8.86248 10.1724Z"
                     fill="#A8A8A8"
                   />
                   <circle
-                    className=" group-hover:fill-[url(#paint0_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/Newnft" &&
+                      "fill-[url(#paint1_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     opacity="0.4"
                     cx="13.625"
                     cy="2.375"
@@ -164,13 +215,20 @@ const Sidebar = () => {
                     fill="#A8A8A8"
                   />
                 </svg>
-                <p className=" hidden lg:block font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300">
+                <p
+                  className={`${
+                    location.pathname === "/Newnft" &&
+                    "bg-browngradiant bg-clip-text text-transparent font-semibold duration-300"
+                  } hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300`}
+                >
                   Insight
                 </p>
               </Link>
               <Link
                 to="history"
-                className="links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-[11px] flex items-center gap-4 group duration-300 cursor-pointer"
+                className={`${
+                  location.pathname === "/history" && "bg-brownlightgr"
+                } links-aside rounded-3xl p-[14px] w-full hover:bg-brownlightgr mt-4 flex items-center gap-4 group duration-300 cursor-pointer`}
               >
                 <svg
                   width="16"
@@ -180,21 +238,32 @@ const Sidebar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className=" group-hover:fill-[url(#paint0_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/history" &&
+                      "fill-[url(#paint0_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M15.4973 4.28134H12.3213C10.8433 4.28394 9.646 5.45136 9.64333 6.89242C9.64133 8.33674 10.84 9.50935 12.3213 9.5113H15.5V9.74076C15.5 12.2602 13.9727 13.75 11.388 13.75H4.61267C2.02733 13.75 0.5 12.2602 0.5 9.74076V4.25339C0.5 1.73397 2.02733 0.25 4.61267 0.25H11.3853C13.97 0.25 15.4973 1.73397 15.4973 4.25339V4.28134ZM4.05467 4.2755H8.28467H8.28733H8.29267C8.60933 4.27419 8.86533 4.02264 8.864 3.71324C8.86267 3.40448 8.604 3.15488 8.28733 3.15618H4.05467C3.74 3.15748 3.48467 3.40644 3.48333 3.71389C3.482 4.02264 3.738 4.27419 4.05467 4.2755Z"
                     fill="#A8A8A8"
                   />
                   <path
-                    className=" group-hover:fill-[url(#paint0_linear_33_463)] duration-300"
+                    className={`${
+                      location.pathname === "/history" &&
+                      "fill-[url(#paint1_linear_33_463)] duration-300"
+                    } group-hover:fill-[url(#paint1_linear_33_463)] duration-300`}
                     opacity="0.4"
                     d="M11.0281 7.22231C11.1849 7.93569 11.8104 8.43761 12.5244 8.42456H14.9619C15.259 8.42456 15.5 8.17849 15.5 7.87434V5.97567C15.4994 5.67217 15.259 5.42546 14.9619 5.4248H12.4671C11.6548 5.42742 10.9987 6.10164 11 6.93251C11 7.02976 11.0096 7.12701 11.0281 7.22231Z"
                     fill="#A8A8A8"
                   />
                   <circle cx="12.5" cy="6.9248" r="0.75" fill="#A8A8A8" />
                 </svg>
-                <p className=" hidden lg:block font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300">
+                <p
+                  className={`${
+                    location.pathname === "/history" &&
+                    "bg-browngradiant bg-clip-text text-transparent font-semibold duration-300"
+                  } hidden lg:block  font-Inter text-sm font-medium text-[#7C7C7C] group-hover:bg-browngradiant group-hover:bg-clip-text group-hover:text-transparent group-hover:font-semibold duration-300`}
+                >
                   Wallet
                 </p>
               </Link>

@@ -59,12 +59,12 @@ const History = () => {
             <select
               name="languages"
               id="lango"
-              className="outline-none bg-transparent w-full font-rubik text-[#4F4F4F] text-xs font-normal font-Inter leading-[20px]"
+              className="outline-none cursor-pointer bg-transparent w-full font-rubik text-[#4F4F4F] text-xs font-normal font-Inter leading-[20px]"
             >
-              <option value="B2B">Last Month</option>
-              <option value="B2C">Last Week</option>
-              <option value="DTC">Last Year</option>
-              <option value="C2B">Last Day</option>
+              <option className="cursor-pointer" value="B2B">Last Month</option>
+              <option className="cursor-pointer" value="B2C">Last Week</option>
+              <option className="cursor-pointer" value="DTC">Last Year</option>
+              <option className="cursor-pointer" value="C2B">Last Day</option>
             </select>
           </div>
         </div>

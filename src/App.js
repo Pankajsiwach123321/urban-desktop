@@ -12,6 +12,7 @@ import NewNft from './components/NewNft';
 function App() {
   return (
     <>
+      
       <div className="App">
         <div className='flex'>
           <Sidebar />

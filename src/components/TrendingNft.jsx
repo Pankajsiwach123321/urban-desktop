@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Noryoz from "../assets/images/naryoz-658139d075751.webp";
 import bgNoryoz from "../assets/images/watersea-658139d33ee60.webp";
 import Bored from "../assets/images/bored-658139cca8969.webp";
@@ -27,9 +27,37 @@ const myinfo = [
     para1: "Ragnarok Meta",
     para2: "7.8K",
   },
+  {
+    id: 4,
+    bgdargon: bgBored,
+    img: Noryoz,
+    para1: " Jozo Gators",
+    para2: "1.1K",
+  },
+  {
+    id: 5,
+    bgdargon: bgBoryoku,
+    img: Bored,
+    para1: "PXN: Ghost Division",
+    para2: "10K",
+  },
+  {
+    id: 6,
+    bgdargon: bgNoryoz,
+    img: Boryoku,
+    para1: "Ragnarok Meta",
+    para2: "7.8K",
+  },
 ];
 const TrendingNft = () => {
-  const myown = myinfo.map((myinfo) => (
+  const [show, setshow] = useState(3);
+  function showme() {
+    if (show == 3) setshow(6);
+    else {
+      setshow(3);
+    }
+  }
+  const myown = myinfo.slice(0, show).map((myinfo) => (
     <div
       className="md:w-4/12 sm:w-6/12 w-full px-3 sm:mt-4 mt-3"
       key={myinfo.id}
@@ -59,33 +87,35 @@ const TrendingNft = () => {
         <h2 className="text-[#4F4F4F] font-Inter text-base font-semibold">
           Trendings NFTs
         </h2>
-        <a href="#" aria-label="viewmore" className="flex items-center gap-3">
+        <span className="flex items-center gap-3">
           <p className="text-[#4F4F4F] font-Inter text-xs font-semibold">
-            Marketplace
+            {show == 3 ? "Marketplace" : "Marketplace-less"}
           </p>
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13.167 7.81706L3.16699 7.81706"
-              stroke="#130F26"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M9.13379 3.80083L13.1671 7.81683L9.13379 11.8335"
-              stroke="#130F26"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </a>
+          <span className=" cursor-pointer" onClick={showme}>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.167 7.81706L3.16699 7.81706"
+                stroke="#130F26"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9.13379 3.80083L13.1671 7.81683L9.13379 11.8335"
+                stroke="#130F26"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
       <div className="row justify-center">{myown}</div>
     </div>
